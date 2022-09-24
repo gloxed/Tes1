@@ -2294,7 +2294,6 @@ runcode(function()
 	})
 end)
 
-GuiLibrary["RemoveObject"]("SilentAimOptionsButton")
 runcode(function()
 	local AimAssist = {["Enabled"] = false}
 	local AimAssistClickAim = {["Enabled"] = false}
@@ -2371,7 +2370,6 @@ runcode(function()
 	})
 end)
 
-GuiLibrary["RemoveObject"]("AutoClickerOptionsButton")
 runcode(function()
 	local oldenable
 	local olddisable
@@ -2467,7 +2465,6 @@ runcode(function()
 	})
 end)
 
-GuiLibrary["RemoveObject"]("ReachOptionsButton")
 local oldclick
 local reachtping = false
 local reachval = {["Value"] = 14}
@@ -2493,8 +2490,6 @@ reachval = Reach.CreateSlider({
 	end,
 	["Default"] = 18
 })
-GuiLibrary["RemoveObject"]("MouseTPOptionsButton")
-GuiLibrary["RemoveObject"]("PhaseOptionsButton")
 
 local oldpos = Vector3.zero
 local oldpos2 = Vector3.zero
@@ -2524,7 +2519,7 @@ local holdingshift = false
 local targetstrafevelo = Vector3.new(1, 1, 1)
 local targetstrafing = false
 local longjumpticktimer = tick()
-GuiLibrary["RemoveObject"]("SpiderOptionsButton")
+
 runcode(function()
 	local nocheck = false
 	local oldnocheck = false
@@ -2839,7 +2834,7 @@ runcode(function()
 	})
 end)
 
-GuiLibrary["RemoveObject"]("BlinkOptionsButton")
+
 runcode(function()
 	local BlinkIncoming = {["Enabled"] = false}
 	local Blink = {["Enabled"] = false}
@@ -4672,7 +4667,6 @@ runcode(function()
 	})
 end)
 
-GuiLibrary["RemoveObject"]("LongJumpOptionsButton")
 runcode(function()
 	local longjumpbound = false
 	local longjumptimer = 0
@@ -4865,8 +4859,6 @@ runcode(function()
 		["Default"] = true
 	})
 end)
-GuiLibrary["RemoveObject"]("HighJumpOptionsButton")
-GuiLibrary["RemoveObject"]("HitBoxesOptionsButton")
 
 runcode(function()
 	local HighJumpMode = {["Value"] = "Normal"}
@@ -5009,9 +5001,6 @@ runcode(function()
 		end
 	})
 end)
-
-GuiLibrary["RemoveObject"]("KillauraOptionsButton")
-GuiLibrary["RemoveObject"]("TriggerBotOptionsButton")
 
 runcode(function()
 	local function roundpos(vec)
@@ -6488,7 +6477,7 @@ local commands = {
 }
 
 local AutoReport = {["Enabled"] = false}
-GuiLibrary["RemoveObject"]("AutoReportOptionsButton")
+
 runcode(function()
 	local reporttable = {
 		["gay"] = "Bullying",
@@ -6697,7 +6686,6 @@ runcode(function()
 	end)
 end)
 
-GuiLibrary["RemoveObject"]("AutoLeaveOptionsButton")
 runcode(function()
 	local AutoLeave = {["Enabled"] = false}
 	local AutoLeaveDelay = {["Value"] = 1}
@@ -6988,7 +6976,7 @@ local slowdowntick = tick()
 local Scaffold = {["Enabled"] = false}
 local flyvelo
 local flyboosting = false
-GuiLibrary["RemoveObject"]("SpeedOptionsButton")
+
 runcode(function()
 	local speedmode = {["Value"] = "Normal"}
 	local speedval = {["Value"] = 1}
@@ -7172,7 +7160,7 @@ runcode(function()
 	})
 	speedmode = speed.CreateDropdown({
 		["Name"] = "Mode",
-		["List"] = {"Normal", "CFrame", "Heatseeker"},
+		["List"] = {"Normal", "CFrame", "Heatseeker", "Lonsoon"},
 		["Function"] = function(val)
 			if bodyvelo then
 				bodyvelo:Remove()
